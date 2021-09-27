@@ -1,0 +1,57 @@
+--NoGoodInjector
+--Made By Bonk#8002
+
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local title = Instance.new("TextLabel")
+local inject = Instance.new("TextButton")
+local credit = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+main.Position = UDim2.new(0.387937456, 0, 0.376687109, 0)
+main.Size = UDim2.new(0, 300, 0, 200)
+main.Active = true
+main.Draggable = true
+
+title.Name = "title"
+title.Parent = main
+title.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+title.Size = UDim2.new(0, 300, 0, 50)
+title.Font = Enum.Font.Antique
+title.Text = "NoGoodLoader"
+title.TextColor3 = Color3.fromRGB(170, 85, 255)
+title.TextSize = 55.000
+title.TextWrapped = true
+
+inject.Name = "inject"
+inject.Parent = main
+inject.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+inject.Position = UDim2.new(0.166666672, 0, 0.644999981, 0)
+inject.Size = UDim2.new(0, 200, 0, 50)
+inject.Font = Enum.Font.Antique
+inject.Text = "Inject"
+inject.TextColor3 = Color3.fromRGB(170, 85, 255)
+inject.TextSize = 35.000
+inject.TextWrapped = true
+inject.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Boonnk/BonksRoblox/main/NoGood.lua", true))()
+end)
+
+credit.Name = "credit"
+credit.Parent = main
+credit.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+credit.BorderColor3 = Color3.fromRGB(38, 38, 38)
+credit.Position = UDim2.new(0.553333342, 0, 0.925000012, 0)
+credit.Size = UDim2.new(0, 134, 0, 15)
+credit.Font = Enum.Font.Antique
+credit.Text = "Made By Bonk"
+credit.TextColor3 = Color3.fromRGB(170, 85, 255)
+credit.TextSize = 15.000
+credit.TextWrapped = true
+credit.TextXAlignment = Enum.TextXAlignment.Right
