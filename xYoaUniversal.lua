@@ -1,19 +1,6 @@
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Boonnk/BonksRoblox/main/Library.lua", true))()
 local w = library:CreateWindow('xYoa')
 w:Section('By Bonk#8002, xHUNAJAx')
-local t = w:Toggle('Example Toggle', {flag = "toggle1"})
-local b = w:Button("Example Button", function()
-   print(w.flags.toggle1)
-end)
-w:Section('Bonk')
-
-local box = w:Box('WalkSpeed', {
-   flag = "ws";
-   type = 'number';
-}, function(new, old, enter)
-   print(new, old, enter)
-   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = tonumber(new)
-end)
 
 w:Section('Visuals')
 local t = w:Toggle('ESP', {flag = "toggle1"}, function(nekotutorial)
@@ -64,7 +51,7 @@ end)
 local b2 = w:Button('Reset FOV', function()
    s:Set(old)
 end)
-w:Section('Bonk')
+w:Section('Player')
 
 local box = w:Box('WalkSpeed', {
    flag = "ws";
